@@ -8,6 +8,10 @@ mkdir -p ~/.docker/cli-plugins/
 curl -SL https://github.com/docker/compose/releases/download/v2.3.3/docker-compose-linux-x86_64 -o ~/.docker/cli-plugins/docker-compose
 chmod +x ~/.docker/cli-plugins/docker-compose
 ```
+verify that the docker compose is installed by running
+```
+sudo docker compose --version
+```
 
 ## Clone repo and run odoo
 create a new folder
