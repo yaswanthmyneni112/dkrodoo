@@ -11,7 +11,7 @@ chmod +x ~/.docker/cli-plugins/docker-compose
 ```
 verify that the docker compose is installed by running
 ```
-sudo docker compose --version
+sudo docker compose version
 ```
 
 ## Clone repo and run odoo
