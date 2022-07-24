@@ -1,6 +1,7 @@
 # dkrodoo
 Quick start odoo with docker for testing
 
+If docker is not installed then install it
 ## Install docker-compose for ubuntu 20.04
 
 ```
