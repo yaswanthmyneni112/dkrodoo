@@ -1,17 +1,16 @@
 # dkrodoo
 Quick start odoo with docker for testing
 
-## Install docker-compose
+## Install docker-compose for ubuntu 20.04
 
 ```
+sudo apt update
 sudo apt install docker.io
-mkdir -p ~/.docker/cli-plugins/
-curl -SL https://github.com/docker/compose/releases/download/v2.3.3/docker-compose-linux-x86_64 -o ~/.docker/cli-plugins/docker-compose
-chmod +x ~/.docker/cli-plugins/docker-compose
+sudo apt install docker-compose
 ```
 verify that the docker compose is installed by running
 ```
-sudo docker compose version
+sudo docker-compose version
 ```
 
 ## Clone repo and run odoo
@@ -20,5 +19,5 @@ goto that folder from terminal and run
 
 ```
 git clone https://github.com/bharat0to/dkrodoo.git
-sudo docker compose up
+sudo docker-compose up
 ```
