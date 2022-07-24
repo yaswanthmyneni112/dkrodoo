@@ -19,5 +19,6 @@ goto that folder from terminal and run
 
 ```
 git clone https://github.com/bharat0to/dkrodoo.git
+cd dkrodoo
 sudo docker-compose up
 ```
