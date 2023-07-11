@@ -1,0 +1,13 @@
+{
+    "docker.commands.composeUp": [
+
+        {
+            "label": "Compose Up",
+            "template": "${composeCommand} ${configurationFile} up"
+        }
+    ],
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.autopep8"
+    },
+    "python.formatting.provider": "none"
+}

@@ -1,0 +1,22 @@
+{
+  "configurations": [
+    {
+      "name": "Odoo Debug Attach",
+      "type": "python",
+      "request": "attach",
+      "justMyCode": false,
+      "port": 5678,
+      "host": "localhost",
+      "pathMappings": [
+        {
+          "localRoot": "${workspaceFolder}/addons",
+          "remoteRoot": "/mnt/extra-addons"
+        },
+        {
+          "localRoot": "${workspaceFolder}/odoo", 
+          "remoteRoot": "/usr/lib/python3/dist-packages/odoo"
+        }
+      ]
+    }
+  ]
+}

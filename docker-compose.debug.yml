@@ -1,0 +1,27 @@
+version: '3.1'
+services:
+  web:
+    image: odoo:15
+    entrypoint: bash -c "pip3 install debugpy==1.6.5 && python3 -m debugpy --listen 0.0.0.0:5678 --log-to-stderr /usr/bin/odoo --dev reload,qweb,werkzeug,xml -d sulaba --db-filter sulaba -init"
+    depends_on:
+      - db
+    ports:
+      - "8069:8069"
+      - "5678:5678"
+    volumes:
+      - odoo-web-data:/var/lib/odoo
+      - ./addons:/mnt/extra-addons
+      - ./odoo.conf:/etc/odoo/odoo.conf
+      - ./odoo:/usr/lib/python3/dist-packages/odoo
+  db:
+    image: postgres:13
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_PASSWORD=odoo
+      - POSTGRES_USER=odoo
+    volumes:
+      - odoo-db-data:/var/lib/postgresql/data
+
+volumes:
+  odoo-web-data:
+  odoo-db-data:
