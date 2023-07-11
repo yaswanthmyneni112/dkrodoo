@@ -30,3 +30,12 @@ run below command in the terminal
 docker exec -it dkrodoo_web_1 odoo shell -d sulaba
 ```
 
+## Debug odoo addon
+To debug the application run odoo server with debugger
+```
+docker-compose -f docker-compose.debug.yml up
+```
+Once the server got started press F5 in vscode editor then the debugger gets attached to the odoo server
+
+You can set breakpoints in the vscode to debug
+
