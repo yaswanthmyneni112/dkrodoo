@@ -28,9 +28,6 @@
                             <field name="name" />
                             <field name="dob" />
                             <field name="gender"/>
-                            <field name="level" />
-                        </group>
-                        <group>
                             <field name="level" widget="priority"/>
                         </group>
                         <group>
@@ -47,15 +44,10 @@
             <field name="name">isha.meditator.pivot.view</field>
             <field name="model">isha.meditator</field>
             <field name="arch" type="xml">
-                <!-- <pivot string="Pivot">
-                    <field name="level" type="row"/>
-                    <field name="age" type="count"/>
-                </pivot> -->
                 <pivot>
                     <field name="name" type="row"/>
                     <field name="gender" type="row"/>
                     <field name="level" type="col"/>
-                    <field name="interesed_in_it" type="measure" string="Interested in IT?"/>
                     <field name="id" type="measure" operator="count" string="Count"/>
                 </pivot>
             </field>
@@ -67,15 +59,34 @@
             <field name="arch" type="xml">
                 <kanban default_group_by="level">
                     <field name="name"/>
-                    <field name="dob"/>
-                    <field name="gender"/>
-                    <field name="level"/>
-                    <field name="interesed_in_it"/>
+                    <!-- <templates>
+                        <div t-name="kanban-box">
+                            <div class="o_kanban_record_top">
+                                <h4 class="o_kanban_record_title p-0 mb4">
+                                    <field name="title" />
+                                </h4>
+                            </div>
+                            <div class="row">
+                                <div class="col-10 p-0 pb-1">
+                                    <div class="container o_kanban_card_content">
+                                        <field name="interested_in_it" />
+                                        <field name="level" />
+                                    </div>
+                                </div>
+                                <div class="col-2 align-self-end">
+                                    <div class="o_kanban_record_bottom">
+                                        <div class="oe_kanban_bottom_left" />
+                                        <div class="oe_kanban_bottom_right">
+                                            <field name="interested_in_it" widget="boolean_button" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </templates> -->
                 </kanban>
             </field>
         </record>
-
-        
 
         <record model="ir.actions.act_window" id="action_isha_meditator_view">
             <field name="name">Isha Meditator</field>

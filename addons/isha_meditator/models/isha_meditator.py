@@ -7,5 +7,5 @@ class IshaMeditator(models.Model):
     dob = fields.Date(string="DoB")
     gender = fields.Selection([('male', 'Male'),('female', 'Female')], string="Gender")
     programs = fields.Many2many(comodel_name='isha.program', string="Programs")
-    level = fields.Selection([('0', 'Basic'),('1', 'Intermediate'), ('2', 'Advanced')], string='Level')
+    level = fields.Selection([('0', ''), ('basic', 'Basic'),('intermediate', 'Intermediate'), ('advanced', 'Advanced')], string='Level')
     interesed_in_it = fields.Boolean("Intereseted in IT?")
