@@ -3,20 +3,22 @@
     <data>
         <menuitem name="Isha Meditator"
                   id="menu_isha_meditator_root"
-				  web_icon="isha_budget_request,static/description/images.png"
+				  web_icon="isha_meditator/static/icon.png"
                   sequence = "10"
                   groups="isha_meditator.isha_meditator_admin,isha_meditator.isha_meditator_user"/>
 
+
         <menuitem id="menu_isha_meditator"
             name="Meditator"
+            parent="menu_isha_meditator_root"
             sequence="1"
-            action="action_isha_meditator_view" />
+            action="isha_meditator.action_isha_meditator_view" />
 
         <menuitem id="menu_isha_program"
             name="Programs"
-            parent="menu_settings_main"
+            parent="menu_isha_meditator_root"
             sequence="2"
             groups="isha_meditator.isha_meditator_admin"
-            action="Isha_Generic.action_account_event_area_view" />
+            action="isha_meditator.action_isha_program_view" />
     </data>
 </odoo>
