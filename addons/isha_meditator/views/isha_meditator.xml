@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 	<data>
-        <record id="mega_isha_event_event_tree_view" model="ir.ui.view">
+        <record id="isha_meditator_tree_view" model="ir.ui.view">
             <field name="name">isha.meditator.view.tree</field>
             <field name="model">isha.meditator</field>
             <field eval="7" name="priority"/>
@@ -17,10 +17,70 @@
             </field>
         </record>
 
+        <record id="isha_meditator_form_view" model="ir.ui.view">
+            <field name="name">isha.meditator.view.form</field>
+            <field name="model">isha.meditator</field>
+            <field name="arch" type="xml">
+              <form string="Isha Meditator">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name" />
+                            <field name="dob" />
+                            <field name="gender"/>
+                            <field name="level" />
+                        </group>
+                        <group>
+                            <field name="level" widget="priority"/>
+                        </group>
+                        <group>
+                            <field name="interesed_in_it" />
+                            <field name="programs" widget="many2many_tags" />
+                        </group>
+                    </group>
+                </sheet>
+              </form>
+            </field>
+        </record>
+
+        <record id="isha_meditator_pivot_view" model="ir.ui.view">
+            <field name="name">isha.meditator.pivot.view</field>
+            <field name="model">isha.meditator</field>
+            <field name="arch" type="xml">
+                <!-- <pivot string="Pivot">
+                    <field name="level" type="row"/>
+                    <field name="age" type="count"/>
+                </pivot> -->
+                <pivot>
+                    <field name="name" type="row"/>
+                    <field name="gender" type="row"/>
+                    <field name="level" type="col"/>
+                    <field name="interesed_in_it" type="measure" string="Interested in IT?"/>
+                    <field name="id" type="measure" operator="count" string="Count"/>
+                </pivot>
+            </field>
+        </record>
+
+        <record id="isha_meditator_pivot_view" model="ir.ui.view">
+            <field name="name">isha.meditator.pivot.view</field>
+            <field name="model">isha.meditator</field>
+            <field name="arch" type="xml">
+                <kanban default_group_by="level">
+                    <field name="name"/>
+                    <field name="dob"/>
+                    <field name="gender"/>
+                    <field name="level"/>
+                    <field name="interesed_in_it"/>
+                </kanban>
+            </field>
+        </record>
+
+        
+
         <record model="ir.actions.act_window" id="action_isha_meditator_view">
             <field name="name">Isha Meditator</field>
             <field name="res_model">isha.meditator</field>
-            <field name="view_mode">tree</field>
+            <field name="view_mode">tree,form,pivot,kanban</field>
         </record>
     </data>
 </odoo>
