@@ -24,6 +24,11 @@ cd dkrodoo
 sudo docker-compose up
 ```
 
+after the server is running navigate to http://localhost:8069
+
+and login with admin, admin 
+
+
 ## Open Odoo shell for python interpreter
 run below command in the terminal
 ```
