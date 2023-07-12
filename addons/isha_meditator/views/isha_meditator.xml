@@ -12,6 +12,7 @@
                     <field name="gender"/>
                     <field name="level" />
                     <field name="interesed_in_it" />
+                    <field name="programs" widget="many2many_tags" />
                 </tree>
             </field>
         </record>
