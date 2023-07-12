@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+        <record id="mega_isha_program_tree_view" model="ir.ui.view">
+            <field name="name">isha.program.view.tree</field>
+            <field name="model">isha.program</field>
+            <field name="arch" type="xml">
+                <tree string="Isha Program">
+                    <field name="name" />
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_isha_program_view">
+            <field name="name">Isha Program</field>
+            <field name="res_model">isha.program</field>
+            <field name="view_mode">tree</field>
+        </record>
+    </data>
+</odoo>
