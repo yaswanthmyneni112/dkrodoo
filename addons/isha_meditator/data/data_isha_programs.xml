@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="isha_program_inner_engineering_online" model="isha.programs">
+            <field name="name">Inner Engineering Online</field>
+        </record>
+        <record id="isha_program_inner_engineering_completion" model="isha.programs">
+            <field name="name">Inner Engineering Completion</field>
+        </record>
+        <record id="isha_program_bsp" model="isha.programs">
+            <field name="name">BSP</field>
+        </record>
+        <record id="isha_program_shoonya" model="isha.programs">
+            <field name="name">Shoonya</field>
+        </record>
+        <record id="isha_program_samyama" model="isha.programs">
+            <field name="name">Samyama</field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+        <record id="mega_isha_event_event_tree_view" model="ir.ui.view">
+            <field name="name">isha.meditator.view.tree</field>
+            <field name="model">isha.meditator</field>
+            <field eval="7" name="priority"/>
+            <field name="arch" type="xml">
+                <tree string="Isha Meditator">
+                    <field name="name" />
+                    <field name="dob" />
+                    <field name="gender"/>
+                    <field name="level" />
+                    <field name="interesed_in_it" />
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_isha_meditator_view">
+            <field name="name">Isha Meditator</field>
+            <field name="res_model">isha.meditator</field>
+            <field name="view_mode">tree</field>
+        </record>
+    </data>
+</odoo>
