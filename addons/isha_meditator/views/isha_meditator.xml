@@ -11,7 +11,7 @@
                     <field name="dob" />
                     <field name="gender"/>
                     <field name="level" />
-                    <field name="interesed_in_it" />
+                    <field name="interested_in_it" />
                     <field name="programs" widget="many2many_tags" />
                 </tree>
             </field>
@@ -31,7 +31,7 @@
                             <field name="level" widget="priority"/>
                         </group>
                         <group>
-                            <field name="interesed_in_it" />
+                            <field name="interested_in_it" />
                             <field name="programs" widget="many2many_tags" />
                         </group>
                     </group>
@@ -48,7 +48,6 @@
                     <field name="name" type="row"/>
                     <field name="gender" type="row"/>
                     <field name="level" type="col"/>
-                    <field name="id" type="measure" operator="count" string="Count"/>
                 </pivot>
             </field>
         </record>
@@ -85,6 +84,22 @@
                         </div>
                     </templates> -->
                 </kanban>
+            </field>
+        </record>
+
+        <record id="isha_meditator_search_view" model="ir.ui.view">
+            <field name="name">isha_meditator_search</field>
+            <field name="model">isha.meditator</field>
+            <field name="arch" type="xml">
+                <search string="Meditator">
+                    <field name="name"/>
+                    <field name="level"/>
+                    <field name="programs"/>
+
+                    <filter string="Only Interesed" name="only_interested" domain="[('interested_in_it', '=', 'True')]"/>
+                    <filter string="Advanced" name="advanced_meditators" domain="[('level', '=', 'advanced')]"/>
+
+                </search>
             </field>
         </record>
 

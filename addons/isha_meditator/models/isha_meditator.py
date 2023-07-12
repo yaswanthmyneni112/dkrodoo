@@ -8,4 +8,4 @@ class IshaMeditator(models.Model):
     gender = fields.Selection([('male', 'Male'),('female', 'Female')], string="Gender")
     programs = fields.Many2many(comodel_name='isha.program', string="Programs")
     level = fields.Selection([('0', ''), ('basic', 'Basic'),('intermediate', 'Intermediate'), ('advanced', 'Advanced')], string='Level')
-    interesed_in_it = fields.Boolean("Intereseted in IT?")
+    interested_in_it = fields.Boolean("Interested in IT?")
