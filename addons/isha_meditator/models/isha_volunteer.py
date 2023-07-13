@@ -9,6 +9,7 @@ from datetime import datetime
 
 class IshaVolunteer(models.Model):
     _name = 'isha.volunteer'
+    _rec_name = 'meditator_id'
 
     meditator_id = fields.Many2one(comodel_name="isha.meditator")
     volunteer_type = fields.Selection(list(constants.VOLUNTEER_TYPE.items()), string='Volunteer Type')
@@ -19,6 +20,8 @@ class IshaVolunteer(models.Model):
     @api.constrains("start_date", "end_date")
     def _check_visit_duration(self):
         for rec in self:
+            if rec.start_date < fields.Date.today():
+                raise ValidationError("Visit can't be in the past!")
             if rec.end_date <= rec.start_date:
                 raise ValidationError("End date can't be less than or equal to Start date")
             if rec.volunteer_type == 'stv' and (rec.end_date - rec.start_date).days >= 30:
