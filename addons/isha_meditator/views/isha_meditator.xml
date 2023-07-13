@@ -43,12 +43,16 @@
                         </group>
                     </group>
                     <group>
-                        <field name="street"/>
-                        <field name="city" />
-                        <field name="country_id" />
-                        <field name="state_id" />
-                        <field name="zip_code" />
-                        <field name="nationality_id" />
+                        <group>
+                            <field name="street"/>
+                            <field name="city" />
+                            <field name="state_id" />
+                        </group>
+                        <group>
+                            <field name="country_id" />
+                            <field name="zip_code" />
+                            <field name="nationality_id" />
+                        </group>
                     </group>
                     <group>
                         <field name="volunteer_ids" />
