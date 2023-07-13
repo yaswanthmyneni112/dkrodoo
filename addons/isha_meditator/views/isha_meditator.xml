@@ -23,6 +23,10 @@
             <field name="model">isha.meditator</field>
             <field name="arch" type="xml">
               <form string="Isha Meditator">
+                <header>
+                    <button action="action_open_volunteer_wizard" string="Volunteer for Short Term" context="{'default_volunteer_type': 'stv'}" />
+                    <button action="action_open_volunteer_wizard" string="Volunteer for Long Term" context="{'default_volunteer_type': 'ltv'}" />
+                </header>
                 <sheet>
                     <group>
                         <group>

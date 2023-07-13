@@ -56,4 +56,18 @@ class IshaMeditator(models.Model):
                 age = str(rd.years) + ' years'
             rec.age = age
 
+    def action_open_volunteer_wizard(self):
+        view_id = self.env.ref('isha_meditator.volunteer_wizard_view').id
+        return {
+            'name': 'Volunteer Wizard',
+            'view_type': 'form',
+            'view_mode': 'form',
+            'res_model': 'volunteer.wizard',
+            'views': [(view_id, 'form')],
+            'type': 'ir.actions.act_window',
+            'target': 'new',
+        }
+    
+
+
 
