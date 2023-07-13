@@ -19,7 +19,7 @@
             <field name="name">isha.volunteer.view.form</field>
             <field name="model">isha.volunteer</field>
             <field name="arch" type="xml">
-              <form string="Isha Volunteer">
+              <form string="Isha Volunteer" create="0" edit="0">
                 <sheet>
                     <header>
                         <field name="visit_status" widget="statusbar"/>

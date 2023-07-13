@@ -24,8 +24,8 @@
             <field name="arch" type="xml">
               <form string="Isha Meditator">
                 <header>
-                    <button name="action_open_volunteer_wizard" type="object" string="Volunteer for Short Term" context="{'default_volunteer_type': 'stv'}" />
-                    <button name="action_open_volunteer_wizard" type="object" string="Volunteer for Long Term" context="{'default_volunteer_type': 'ltv'}" />
+                    <button attrs="{'invisible' : [('id', '=', False)]}" name="action_open_volunteer_wizard" type="object" string="Volunteer for Short Term" context="{'default_volunteer_type': 'stv'}" />
+                    <button attrs="{'invisible' : [('id', '=', False)]}" name="action_open_volunteer_wizard" type="object" string="Volunteer for Long Term" context="{'default_volunteer_type': 'ltv'}" />
                 </header>
                 <sheet>
                     <group>
