@@ -8,6 +8,7 @@ from . import constants
 class IshaVolunteer(models.Model):
     _name = 'isha.volunteer'
 
+    meditator_id = fields.Many2one(comodel_name="isha.meditator")
     volunteer_type = fields.Selection(list(constants.VOLUNTEER_TYPE.items()), string='Volunteer Type')
     start_date = fields.Date(string="Start Date")
     end_date = fields.Date(string="End Date")

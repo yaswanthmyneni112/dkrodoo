@@ -27,6 +27,9 @@ class IshaMeditator(models.Model):
     is_overseas = fields.Selection([('undefined', 'Undefined'), ('yes', 'Yes'), ('no', 'No')],
                                    compute="_compute_is_overseas", string="Is Overseas", default='undefined',
                                    store=True)
+    
+
+    volunteer_ids = fields.One2many("isha.volunteer", 'meditator_id', string="Volunteering")
 
     @api.constrains('street')
     def _check_street_length(self):
