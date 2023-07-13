@@ -29,7 +29,7 @@ class IshaMeditator(models.Model):
                                    store=True)
     
 
-    volunteer_ids = fields.One2many("isha.volunteer", 'meditator_id', string="Volunteering")
+    volunteer_ids = fields.One2many("isha.volunteer", "meditator_id", string="Volunteering")
 
     @api.constrains('street')
     def _check_street_length(self):

@@ -6,13 +6,16 @@
         <field name="name">Isha Meditator</field>
         <field name="visible" eval="1"/>
     </record>
-        <record id="isha_meditator_admin" model="res.groups">
-            <field name="name">Admin</field>
-            <field name="category_id" ref="module_isha_meditator"/>
-        </record>
+
 
         <record id="isha_meditator_user" model="res.groups">
             <field name="name">User</field>
+            <field name="category_id" ref="module_isha_meditator"/>
+        </record>
+
+        <record id="isha_meditator_admin" model="res.groups">
+            <field name="name">Admin</field>
+            <field name="implied_ids" eval="[(4, ref('isha_meditator_user'))]"/>
             <field name="category_id" ref="module_isha_meditator"/>
         </record>
 
