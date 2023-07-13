@@ -7,6 +7,7 @@
             <field name="arch" type="xml">
                 <tree string="Isha Volunteer" create="0" edit="0">
                     <field name="meditator_id" />
+                    <field name="vol_num" />
                     <field name="volunteer_type" />
                     <field name="start_date" />
                     <field name="end_date" />
@@ -31,6 +32,7 @@
                         </group>
 
                         <group>
+                            <field name="vol_num" />
                             <field name="volunteer_type" />
 
                             <field name="end_date" />
