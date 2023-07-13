@@ -20,5 +20,12 @@
             sequence="2"
             groups="isha_meditator.isha_meditator_admin"
             action="isha_meditator.action_isha_program_view" />
+
+        <menuitem id="menu_isha_volunteer"
+            name="Volunteers"
+            parent="menu_isha_meditator_root"
+            sequence="3"
+            groups="isha_meditator.isha_meditator_admin"
+            action="isha_meditator.action_isha_volunteer_view" />            
     </data>
 </odoo>

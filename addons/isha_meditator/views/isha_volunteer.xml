@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+        <record id="isha_volunteer_tree_view" model="ir.ui.view">
+            <field name="name">isha.volunteer.view.tree</field>
+            <field name="model">isha.volunteer</field>
+            <field name="arch" type="xml">
+                <tree string="Isha Volunteer">
+                    <!-- <field name="meditator_id" /> -->
+                    <field name="volunteer_type" />
+                    <field name="start_date" />
+                    <field name="end_date" />
+                    <field name="visit_status" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="isha_volunteer_form_view" model="ir.ui.view">
+            <field name="name">isha.volunteer.view.form</field>
+            <field name="model">isha.volunteer</field>
+            <field name="arch" type="xml">
+              <form string="Isha Volunteer">
+                <sheet>
+                    <header>
+                        <field name="visit_status" widget="statusbar"/>
+                    </header>
+                    <group>
+                        <!-- <field name="meditator_id" /> -->
+                        <field name="volunteer_type" />
+                        <field name="start_date" />
+                        <field name="end_date" />
+                    </group>
+                </sheet>
+              </form>
+            </field>
+        </record>
+
+        <record id="action_isha_volunteer_view" model="ir.actions.act_window">
+            <field name="name">Isha Volunteer</field>
+            <field name="res_model">isha.volunteer</field>
+            <field name="view_mode">tree</field>
+        </record>        
+    </data>
+</odoo>
