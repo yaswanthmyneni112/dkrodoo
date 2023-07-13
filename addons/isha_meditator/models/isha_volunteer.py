@@ -12,4 +12,4 @@ class IshaVolunteer(models.Model):
     volunteer_type = fields.Selection(list(constants.VOLUNTEER_TYPE.items()), string='Volunteer Type')
     start_date = fields.Date(string="Start Date")
     end_date = fields.Date(string="End Date")
-    visit_status = fields.Selection(list(constants.VOLUNTEER_VISIT_STATUS.items()), string='Volunteer Visit Status')
+    visit_status = fields.Selection(list(constants.VOLUNTEER_VISIT_STATUS.items()), string='Volunteer Visit Status', default="yet_to_arrive")
