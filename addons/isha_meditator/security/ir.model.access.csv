@@ -5,4 +5,4 @@ access_isha_program_admin,isha.program.admin,model_isha_program,isha_meditator_a
 access_isha_meditator_user,isha.meditator.user,model_isha_meditator,isha_meditator_user,1,0,0,0
 access_isha_program_user,isha.program.user,model_isha_program,isha_meditator_user,1,0,0,0
 access_isha_volunteer_user,isha.volunteer.user,model_isha_volunteer,isha_meditator_user,1,1,1,1
-access_isha_volunteer_wizard,volunteer.wizard,model_volunteer_wizard,,1,1,1,1
+access_isha_volunteer_wizard_user,isha.volunteer.wizard,model_volunteer_wizard,,1,1,1,1

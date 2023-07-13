@@ -2,6 +2,8 @@ from odoo import fields, models, api
 from odoo.exceptions import ValidationError
 from dateutil.relativedelta import relativedelta
 from datetime import date
+import logging
+_logger = logging.getLogger(__name__)
 
 class IshaMeditator(models.Model):
     _name = 'isha.meditator'
@@ -57,6 +59,7 @@ class IshaMeditator(models.Model):
             rec.age = age
 
     def action_open_volunteer_wizard(self):
+        _logger.info(f"action_open_volunteer_wizard {self}")
         view_id = self.env.ref('isha_meditator.volunteer_wizard_view').id
         return {
             'name': 'Volunteer Wizard',
