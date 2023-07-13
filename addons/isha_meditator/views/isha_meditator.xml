@@ -9,6 +9,7 @@
                 <tree string="Isha Meditator">
                     <field name="name" />
                     <field name="dob" />
+                    <field name="age" />
                     <field name="gender"/>
                     <field name="level" />
                     <field name="interested_in_it" />
@@ -33,7 +34,17 @@
                         <group>
                             <field name="interested_in_it" />
                             <field name="programs" widget="many2many_tags" />
+                            <field name="is_overseas" />
+                            <field name="currency_id" />
                         </group>
+                    </group>
+                    <group>
+                        <field name="street"/>
+                        <field name="city" />
+                        <field name="country_id" />
+                        <field name="state_id" />
+                        <field name="zip_code" />
+                        <field name="nationality_id" />
                     </group>
                 </sheet>
               </form>
@@ -52,8 +63,8 @@
             </field>
         </record>
 
-        <record id="isha_meditator_pivot_view" model="ir.ui.view">
-            <field name="name">isha.meditator.pivot.view</field>
+        <record id="isha_meditator_kanban_view" model="ir.ui.view">
+            <field name="name">isha.meditator.kanban.view</field>
             <field name="model">isha.meditator</field>
             <field name="arch" type="xml">
                 <kanban default_group_by="level">
