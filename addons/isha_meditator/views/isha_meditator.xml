@@ -12,8 +12,10 @@
                     <field name="age" />
                     <field name="gender"/>
                     <field name="level" />
-                    <field name="interested_in_it" />
+<!--                    <field name="interested_in_it" />-->
                     <field name="programs" widget="many2many_tags" />
+                    <field name="country_id"/>
+                    <field name="nationality_id"/>
                 </tree>
             </field>
         </record>
@@ -36,10 +38,10 @@
                             <field name="level" widget="priority"/>
                         </group>
                         <group>
-                            <field name="interested_in_it" />
-                            <field name="programs" widget="many2many_tags" />
+                            <field name="age" />
                             <field name="is_overseas" />
                             <field name="currency_id" />
+                            <field name="programs" widget="many2many_tags" />
                         </group>
                     </group>
                     <group>
