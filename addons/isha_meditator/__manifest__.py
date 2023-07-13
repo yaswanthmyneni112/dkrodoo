@@ -17,6 +17,7 @@
 
         'views/isha_meditator.xml',
         'views/isha_program.xml',
+        'views/isha_volunteer.xml',
         'wizard/volunteer_wizard.xml',
         'menus/menus.xml'
     ],

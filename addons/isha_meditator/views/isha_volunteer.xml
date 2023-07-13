@@ -5,8 +5,8 @@
             <field name="name">isha.volunteer.view.tree</field>
             <field name="model">isha.volunteer</field>
             <field name="arch" type="xml">
-                <tree string="Isha Volunteer">
-                    <!-- <field name="meditator_id" /> -->
+                <tree string="Isha Volunteer" create="0" edit="0">
+                    <field name="meditator_id" />
                     <field name="volunteer_type" />
                     <field name="start_date" />
                     <field name="end_date" />
@@ -25,7 +25,7 @@
                         <field name="visit_status" widget="statusbar"/>
                     </header>
                     <group>
-                        <!-- <field name="meditator_id" /> -->
+                        <field name="meditator_id" />
                         <field name="volunteer_type" />
                         <field name="start_date" />
                         <field name="end_date" />
@@ -38,7 +38,7 @@
         <record id="action_isha_volunteer_view" model="ir.actions.act_window">
             <field name="name">Isha Volunteer</field>
             <field name="res_model">isha.volunteer</field>
-            <field name="view_mode">tree</field>
+            <field name="view_mode">tree,form</field>
         </record>        
     </data>
 </odoo>
