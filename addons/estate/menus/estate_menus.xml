@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <menuitem id="root_menu_estate_property" 
+                  name="Real Estate"
+                  
+                  />
+
+        <menuitem id="first_level_menu_estate_property"
+                  name="Advertisements"
+                  parent='root_menu_estate_property'
+                  
+                  />
+
+        <!-- <menuitem id="first_level_estate_property_type" 
+                  name="Settings" 
+                  parent='root_menu_estate_property'
+                  sequence='20'
+                  /> -->
+
+        <menuitem id="menu_action_estate_property" 
+                  name="Properties" 
+                  parent='first_level_menu_estate_property'
+                  action="action_estate_property"
+                  
+                  />
+
+        <!-- <menuitem id="menu_action_estate_property" 
+                  name="Property Type" 
+                  parent='first_level_estate_property_type'
+                  sequence='0'
+                  action="action_estate_property"
+                  /> -->
+    </data>
+</odoo>
